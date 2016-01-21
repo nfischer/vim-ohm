@@ -1,7 +1,8 @@
 " ---------------------------------------------------------------------------
 " Name of the grammar
 " ---------------------------------------------------------------------------
-syntax match GrammarName '\v^\w+(\s*\{)@='
+syntax match GrammarName '\v^\s*\w+(\s*\{)@=' " no super grammar
+syntax match GrammarName '\v^\s*\w+\s*\<:\s*\w+(\s*\{)@=' " with a super grammar
 highlight link GrammarName Keyword
 
 " ---------------------------------------------------------------------------
@@ -34,6 +35,16 @@ syntax match Operator '\v\|'
 syntax match Operator '\v\+'
 syntax match Operator '\v\*'
 syntax match Operator '\v\?'
+syntax match Operator '\v\~'
+syntax match Operator '\v\&'
+syntax match Operator '\v\.\.'
+
+" Pairs of brackets highlight at the same time
+syntax match Operator '\v\<(.*\>)@='
+syntax match Operator '\v(\<.*)@<=\>'
+
+" For Super Grammar
+syntax match Operator '\v\<:'
 
 " ---------------------------------------------------------------------------
 " Grammar rules
