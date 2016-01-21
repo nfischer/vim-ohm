@@ -20,7 +20,7 @@ Installation
 
 ### Using Vundle (recommended)
 
-Put the following lines in your `.vimrc` file:
+Put the following lines in your `vimrc` file:
 
 ```Vim
 Plugin 'nfischer/vim-ohm'
@@ -37,19 +37,16 @@ syntax on
 
 ### Without a plugin manager
 
-First, download the file:
+Download the file `ohm.vim` from the `syntax/` folder. Then copy it into your
+folder `~/.vim/syntax`. If this folder does not exist, create it.
+
+If you do not have a `vimrc` file, create it in your home directory:
 
 ```Bash
-$ mkdir -p ~/.vim
-$ cd ~/.vim
-$ mkdir -p syntax/
-$ cd syntax/
-$ rm -rf vim-ohm/
-$ git clone https://github.com/nfischer/vim-ohm.git
-$ ln -s vim-ohm/syntax/ohm.vim ohm.vim
+$ touch ~/.vimrc
 ```
 
-And then edit your `.vimrc`:
+Next, add these lines to your `vimrc`:
 
 ```Vim
 augroup Ohm
