@@ -8,11 +8,10 @@ highlight link GrammarName Keyword
 " ---------------------------------------------------------------------------
 " Comments
 " ---------------------------------------------------------------------------
-syntax match Comment '\m/\*\_.\{-}\*/'
+syntax region Comment start='\V\/*' end='\V*\/'
 syntax match Comment '\v\([^)]*\)\_s*\=@='
 syntax match Comment '\v//.*'
 
-" syntax match Comment '\m\(\a\+\s*\)\@=(\w\+)'
 " ---------------------------------------------------------------------------
 " Special name-mangling rule modifier
 " ---------------------------------------------------------------------------
