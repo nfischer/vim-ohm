@@ -9,7 +9,7 @@ highlight link GrammarName Keyword
 " Comments
 " ---------------------------------------------------------------------------
 syntax region Comment start='\V\/*' end='\V*\/'
-syntax match Comment '\v\([^)]*\)\_s*\=@='
+syntax region Comment start='\v(\a+\_s*)@<=\(' end='\v\)(\_s*\=)@='
 syntax match Comment '\v//.*'
 
 " ---------------------------------------------------------------------------
@@ -50,8 +50,15 @@ syntax match Operator '\v\<:'
 " ---------------------------------------------------------------------------
 syntax match SyntacticRule '\v<\u\a*>(\_s{-}(\=|:\=|\+\=))@='
 syntax match SyntacticRule '\v<\u\a*>(\_s{-}\([^)]*\)\_s{-}(\=|:\=|\+\=))@='
-highlight SyntacticRule term=bold cterm=bold ctermfg=lightblue gui=bold guifg=lightskyblue
+syntax match SyntacticRule '\v<\u\a*>(\_s{-}\([^)]*\_s{-}(\=|:\=|\+\=))@='
 
 syntax match LexicalRule '\v<\U\a*>(\_s{-}(\=|:\=|\+\=))@='
 syntax match LexicalRule '\v<\U\a*>(\_s{-}\([^)]*\)\_s{-}(\=|:\=|\+\=))@='
+syntax match LexicalRule '\v<\U\a*>(\_s{-}\([^)]*\_s{-}(\=|:\=|\+\=))@='
+
+" ---------------------------------------------------------------------------
+" Specifying highlighting
+" ---------------------------------------------------------------------------
+
+highlight SyntacticRule term=bold cterm=bold ctermfg=lightblue gui=bold guifg=lightskyblue
 highlight LexicalRule term=NONE cterm=NONE ctermfg=lightblue gui=NONE guifg=lightskyblue
