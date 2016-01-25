@@ -9,7 +9,7 @@ highlight link GrammarName Keyword
 " Comments
 " ---------------------------------------------------------------------------
 syntax region Comment start='\V\/*' end='\V*\/'
-syntax region Comment start='\v(\a+\_s*)@<=\(' end='\v\)(\_s*\=)@='
+syntax match Comment '\v(\a+\_s*)@<=\([^)]*\)(\_s*\=)@='
 syntax match Comment '\v//.*'
 
 " ---------------------------------------------------------------------------
