@@ -1,8 +1,8 @@
 " ---------------------------------------------------------------------------
 " Name of the grammar
 " ---------------------------------------------------------------------------
-syntax match GrammarName '\v^\s*\w+(\s*\{)@=' " no super grammar
-syntax match GrammarName '\v^\s*\w+\s*\<:\s*\w+(\s*\{)@=' " with a super grammar
+syntax match GrammarName '\v^\s*\w+(\_s*\{)@=' " no super grammar
+syntax match GrammarName '\v^\s*\w+\_s*\<:\_s*\w+(\_s*\{)@=' " with a super grammar
 highlight link GrammarName Keyword
 
 " ---------------------------------------------------------------------------
