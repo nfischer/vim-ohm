@@ -33,6 +33,7 @@ augroup Ohm
 augroup END
 
 syntax on
+set background=dark " (optional) for better colors against a dark terminal
 ```
 
 ### Without a plugin manager
