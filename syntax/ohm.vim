@@ -60,5 +60,11 @@ syntax match LexicalRule '\v<\U\a*>(\_s{-}\([^)]*\_s{-}(\=|:\=|\+\=))@='
 " Specifying highlighting
 " ---------------------------------------------------------------------------
 
-highlight SyntacticRule term=bold cterm=bold ctermfg=lightblue gui=bold guifg=lightskyblue
-highlight LexicalRule term=NONE cterm=NONE ctermfg=lightblue gui=NONE guifg=lightskyblue
+if &background == 'dark'
+  " Specify specific colors
+  highlight SyntacticRule term=bold cterm=bold ctermfg=lightblue gui=bold guifg=lightskyblue
+  highlight LexicalRule term=NONE cterm=NONE ctermfg=lightblue gui=NONE guifg=lightskyblue
+else
+  highlight link SyntacticRule Identifier
+  highlight link LexicalRule PreProc
+endif
