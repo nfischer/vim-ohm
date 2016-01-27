@@ -1,20 +1,25 @@
 " ---------------------------------------------------------------------------
+" Major regions
+" ---------------------------------------------------------------------------
+syntax cluster OhmFile contains=GrammarName,OhmGrammar
+syntax region OhmGrammar start='\V{' end='\V}' contains=OhmComment,SyntacticRule,LexicalRule,CaseName,RuleDescription,OhmOperator,OhmString
+
+" ---------------------------------------------------------------------------
 " Name of the grammar
 " ---------------------------------------------------------------------------
 syntax match GrammarName '\v^\s*\w+(\_s*\{)@=' " no super grammar
 syntax match GrammarName '\v^\s*\w+\_s*\<:\_s*\w+(\_s*\{)@=' " with a super grammar
-
 " ---------------------------------------------------------------------------
 " Comments
 " ---------------------------------------------------------------------------
-syntax region OhmComment start='\V\/*' end='\V*\/'
-syntax match OhmComment '\v//.*'
-syntax match RuleDescription '\v(\a+\_s*)@<=\([^)]*\)(\_s*\=)@='
+syntax region OhmComment start='\V\/*' end='\V*\/' contains=@Spell
+syntax region OhmComment start='\v//' end='\v$' contains=@Spell
+syntax match RuleDescription '\v(\a+\_s*)@<=\([^)]*\)(\_s*\=)@=' contains=@Spell
 
 " ---------------------------------------------------------------------------
 " Special name-mangling rule modifier
 " ---------------------------------------------------------------------------
-syntax match CaseName '\v--\s*\w+$'
+syntax region CaseName start='\v--\s*' end='\v$' keepend
 
 " ---------------------------------------------------------------------------
 " Strings
