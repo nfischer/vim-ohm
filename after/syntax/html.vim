@@ -5,7 +5,7 @@ endif
 
 " Try to add ohm highlighting
 syntax include @OHM syntax/ohm.vim
-syntax region textSnipOHM start="<script type=.text/ohm.js.>" end="</script>" contains=@OHM
+syntax region textSnipOHM start="\m<script \+type=[\"']text/ohm-js[\"']>" end="</script>" contains=@OHM
 
 
 if exists('s:current_syntax')
