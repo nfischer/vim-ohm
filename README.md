@@ -3,6 +3,8 @@ Vim-Ohm
 
 Ohm syntax highlighting for vim!
 
+![Vim screen shot](https://i.imgur.com/4622lKb.png "Ohm in technicolor!")
+
 About
 -----
 
