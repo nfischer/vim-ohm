@@ -26,12 +26,6 @@ Put the following lines in your `vimrc` file:
 Plugin 'nfischer/vim-ohm'
 " ...
 
-" Use this autocmd to recognize ohm files
-augroup Ohm
-  autocmd!
-  autocmd BufNewFile,BufReadPost *.ohm set filetype=ohm
-augroup END
-
 syntax on
 set background=dark " (optional) for better colors against a dark terminal
 ```
@@ -50,9 +44,5 @@ $ touch ~/.vimrc
 Next, add these lines to your `vimrc`:
 
 ```Vim
-augroup Ohm
-  autocmd!
-  autocmd BufNewFile,BufReadPost *.ohm set filetype=ohm
-augroup END
 syntax on
 ```

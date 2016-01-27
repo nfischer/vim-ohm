@@ -62,3 +62,5 @@ syntax match LexicalRule '\v<\U\a*>(\_s{-}\([^)]*\_s{-}(\=|:\=|\+\=))@='
 
 highlight SyntacticRule term=bold cterm=bold ctermfg=lightblue gui=bold guifg=lightskyblue
 highlight LexicalRule term=NONE cterm=NONE ctermfg=lightblue gui=NONE guifg=lightskyblue
+
+let b:current_syntax = 'ohm'
