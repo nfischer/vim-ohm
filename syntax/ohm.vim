@@ -19,7 +19,7 @@ syntax match RuleDescription '\v(\a+\_s*)@<=\([^)]*\)(\_s*\=)@=' contains=@Spell
 " ---------------------------------------------------------------------------
 " Special name-mangling rule modifier
 " ---------------------------------------------------------------------------
-syntax region CaseName start='\v--\s*' end='\v$' keepend
+syntax region CaseName start='\v--\s*\a' end='\v(\/\/|\/\*|\s)' keepend
 
 " ---------------------------------------------------------------------------
 " Strings
