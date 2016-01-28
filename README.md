@@ -25,8 +25,8 @@ Installation
 Put the following lines in your `vimrc` file:
 
 ```Vim
+" Inside your plugin section
 Plugin 'nfischer/vim-ohm'
-" ...
 
 syntax on
 set background=dark " (optional) for better colors against a dark terminal
@@ -35,16 +35,9 @@ set background=dark " (optional) for better colors against a dark terminal
 ### Without a plugin manager
 
 Download the file `ohm.vim` from the `syntax/` folder. Then copy it into your
-folder `~/.vim/syntax`. If this folder does not exist, create it.
+folder `~/.vim/syntax/`. If this folder does not exist, create it.
 
-If you do not have a `vimrc` file, create it in your home directory:
+Do the same with `ohm.vim` from `ftdetect/` and the `~/.vim/ftdetect/` folder.
 
-```Bash
-$ touch ~/.vimrc
-```
-
-Next, add these lines to your `vimrc`:
-
-```Vim
-syntax on
-```
+Then, once vim starts up, if you don't see any colors, type `:syntax on<CR>`,
+where `<CR>` denotes a carriage return.
