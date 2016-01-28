@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufReadPost *.ohm set filetype=ohm
+autocmd BufNewFile,BufReadPost *.ohm setfiletype ohm

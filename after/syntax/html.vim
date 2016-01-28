@@ -10,6 +10,7 @@ syntax region textSnipOHM start="\m<script \+type=[\"']text/ohm-js[\"']>" end="\
 
 if exists('s:current_syntax')
   let b:current_syntax = s:current_syntax
+  unlet s:current_syntax
 else
   unlet b:current_syntax
 endif
