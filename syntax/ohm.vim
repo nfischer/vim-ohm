@@ -52,13 +52,13 @@ syntax match OhmOperator '\v\<:'
 " ---------------------------------------------------------------------------
 " Grammar rules
 " ---------------------------------------------------------------------------
-syntax match SyntacticRule '\v<\u\a*>(\_s{-}(\=|:\=|\+\=))@='
-syntax match SyntacticRule '\v<\u\a*>(\_s{-}\([^)]*\)\_s{-}(\=|:\=|\+\=))@='
-syntax match SyntacticRule '\v<\u\a*>(\_s{-}\([^)]*\_s{-}(\=|:\=|\+\=))@='
+syntax match SyntacticRule '\v<\u\w*>(\_s{-}(\=|:\=|\+\=))@='
+syntax match SyntacticRule '\v<\u\w*>(\_s{-}\([^)]*\)\_s{-}(\=|:\=|\+\=))@='
+syntax match SyntacticRule '\v<\u\w*>(\_s{-}\([^)]*\_s{-}(\=|:\=|\+\=))@='
 
-syntax match LexicalRule '\v<\U\a*>(\_s{-}(\=|:\=|\+\=))@='
-syntax match LexicalRule '\v<\U\a*>(\_s{-}\([^)]*\)\_s{-}(\=|:\=|\+\=))@='
-syntax match LexicalRule '\v<\U\a*>(\_s{-}\([^)]*\_s{-}(\=|:\=|\+\=))@='
+syntax match LexicalRule '\v<\U\w*>(\_s{-}(\=|:\=|\+\=))@='
+syntax match LexicalRule '\v<\U\w*>(\_s{-}\([^)]*\)\_s{-}(\=|:\=|\+\=))@='
+syntax match LexicalRule '\v<\U\w*>(\_s{-}\([^)]*\_s{-}(\=|:\=|\+\=))@='
 
 " ---------------------------------------------------------------------------
 " Specifying highlighting
