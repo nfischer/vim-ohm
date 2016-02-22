@@ -24,7 +24,8 @@ syntax region CaseName start='\v--\s*\a' end='\v(\/\/|\/\*|\s)' keepend
 " ---------------------------------------------------------------------------
 " Strings
 " ---------------------------------------------------------------------------
-syntax region OhmString start=/\v"/ skip=/\v\\./ end=/\v"/
+syntax region OhmString start=/\v"/ skip=/\v\\./ end=/\v"/ contains=OhmEscapeSequence
+syntax match OhmEscapeSequence '\v\\.' contained
 
 " ---------------------------------------------------------------------------
 " Operators
@@ -72,6 +73,7 @@ highlight default link RuleDescription Comment
 highlight default link CaseName Special
 
 highlight default link OhmString String
+highlight default link OhmEscapeSequence Special
 
 highlight default link OhmOperator Operator
 
