@@ -2,7 +2,7 @@
 " Major regions
 " ---------------------------------------------------------------------------
 syntax cluster OhmFile contains=GrammarName,OhmGrammar
-syntax region OhmGrammar start='\V{' end='\V}' contains=OhmComment,SyntacticRule,LexicalRule,CaseName,RuleDescription,OhmOperator,OhmString
+syntax region OhmGrammar start='\V{' end='\V}' contains=OhmComment,SyntacticRule,LexicalRule,CaseName,RuleDescription,OhmOperator,OhmString,OhmKeyword
 
 " ---------------------------------------------------------------------------
 " Name of the grammar
@@ -46,9 +46,17 @@ syntax match OhmOperator '\v\.\.'
 " Pairs of brackets highlight at the same time
 syntax match OhmOperator '\v\<(.*\>)@='
 syntax match OhmOperator '\v(\<.*)@<=\>'
+syntax match OhmOperator '\v(\<.*)@<=,(.*\>)@='
 
 " For Super Grammar
 syntax match OhmOperator '\v\<:'
+
+" ---------------------------------------------------------------------------
+" Keywords
+" ---------------------------------------------------------------------------
+
+syntax keyword OhmKeyword ListOf EmptyListOf NonemptyListOf
+syntax keyword OhmKeyword listOf emptyListOf nonemptyListOf
 
 " ---------------------------------------------------------------------------
 " Grammar rules
@@ -76,6 +84,8 @@ highlight default link OhmString String
 highlight default link OhmEscapeSequence Special
 
 highlight default link OhmOperator Operator
+
+highlight default link OhmKeyword Type
 
 highlight default SyntacticRule term=bold cterm=bold ctermfg=lightblue gui=bold guifg=lightskyblue
 highlight default LexicalRule term=NONE cterm=NONE ctermfg=lightblue gui=NONE guifg=lightskyblue
