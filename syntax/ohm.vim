@@ -42,6 +42,7 @@ syntax match OhmOperator '\v\?'
 syntax match OhmOperator '\v\~'
 syntax match OhmOperator '\v\&'
 syntax match OhmOperator '\v\.\.'
+syntax match OhmOperator '\v#(\()@='
 
 " Pairs of brackets highlight at the same time
 syntax match OhmOperator '\v\<(.*\>)@='
