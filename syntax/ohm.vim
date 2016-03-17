@@ -1,14 +1,20 @@
+if exists('b:current_syntax')
+  finish
+endif
+
 " ---------------------------------------------------------------------------
 " Major regions
 " ---------------------------------------------------------------------------
 syntax cluster OhmFile contains=GrammarName,OhmGrammar
-syntax region OhmGrammar start='\V{' end='\V}' contains=OhmComment,SyntacticRule,LexicalRule,CaseName,RuleDescription,OhmOperator,OhmString,OhmKeyword
+syntax region OhmGrammar start='\V{' end='\V}'
+    \ contains=OhmComment,SyntacticRule,LexicalRule,CaseName,RuleDescription,OhmOperator,OhmString,OhmKeyword
 
 " ---------------------------------------------------------------------------
 " Name of the grammar
 " ---------------------------------------------------------------------------
 syntax match GrammarName '\v^\s*\w+(\_s*\{)@=' " no super grammar
 syntax match GrammarName '\v^\s*\w+\_s*\<:\_s*\w+(\_s*\{)@=' " with a super grammar
+
 " ---------------------------------------------------------------------------
 " Comments
 " ---------------------------------------------------------------------------
@@ -30,18 +36,11 @@ syntax match OhmEscapeSequence '\v\\.' contained
 " ---------------------------------------------------------------------------
 " Operators
 " ---------------------------------------------------------------------------
-syntax match OhmOperator '\v\='
-syntax match OhmOperator '\v:\='
-syntax match OhmOperator '\v\+\='
 
+" For normal rules
+syntax match OhmOperator '\v(\=|:\=|\+\=)'
 syntax match OhmOperator '\v\|'
-
-syntax match OhmOperator '\v\+'
-syntax match OhmOperator '\v\*'
-syntax match OhmOperator '\v\?'
-syntax match OhmOperator '\v\~'
-syntax match OhmOperator '\v\&'
-syntax match OhmOperator '\v\.\.'
+syntax match OhmOperator '\v(\+|\*|\~|\&|\.\.|\?)'
 syntax match OhmOperator '\v#(\()@='
 
 " Pairs of brackets highlight at the same time
@@ -75,20 +74,15 @@ syntax match LexicalRule '\v<\U\w*>(\_s{-}\([^)]*\_s{-}(\=|:\=|\+\=))@='
 " ---------------------------------------------------------------------------
 
 highlight default link GrammarName Keyword
-
 highlight default link OhmComment Comment
 highlight default link RuleDescription Comment
-
 highlight default link CaseName Special
-
 highlight default link OhmString String
 highlight default link OhmEscapeSequence Special
-
 highlight default link OhmOperator Operator
-
 highlight default link OhmKeyword Type
 
 highlight default SyntacticRule term=bold cterm=bold ctermfg=lightblue gui=bold guifg=lightskyblue
 highlight default LexicalRule term=NONE cterm=NONE ctermfg=lightblue gui=NONE guifg=lightskyblue
 
-let b:current_syntax = 'ohm'
+let b:current_syntax = "ohm"
