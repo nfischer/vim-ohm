@@ -10,6 +10,11 @@ About
 
 This contains the vim syntax file for `.ohm` files.
 
+Like it? Let me know by giving it a star on Github. This is still under active
+development, so if you find any bugs or have any feature requests, please let me
+know by [filing an issue](https://github.com/nfischer/vim-ohm/issues/new) and
+I'll deal with it quickly.
+
 What is Ohm?
 ------------
 
