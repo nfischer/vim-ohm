@@ -57,6 +57,7 @@ syntax match OhmOperator '\v\<:'
 
 syntax keyword OhmKeyword ListOf EmptyListOf NonemptyListOf
 syntax keyword OhmKeyword listOf emptyListOf nonemptyListOf
+syntax keyword OhmKeyword any letter lower upper digit hexDigit alnum space end
 
 " ---------------------------------------------------------------------------
 " Grammar rules
