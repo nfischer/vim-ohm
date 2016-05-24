@@ -24,7 +24,7 @@ Ohm is a language for prototyping programming languages. Check out the project
 Installation
 ------------
 
-### Using Vundle (recommended)
+### Using [Vundle](https://github.com/VundleVim/Vundle.vim) (recommended)
 
 Put the following lines in your `vimrc` file:
 
