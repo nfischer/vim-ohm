@@ -7,7 +7,7 @@ endif
 " ---------------------------------------------------------------------------
 syntax cluster OhmFile contains=GrammarName,OhmGrammar
 syntax region OhmGrammar start='\V{' end='\V}'
-    \ contains=OhmComment,SyntacticRule,LexicalRule,CaseName,RuleDescription,OhmOperator,OhmString,OhmKeyword
+    \ contains=OhmComment,SyntacticRule,LexicalRule,CaseName,RuleDescription,OhmOperator,OhmString,OhmKeyword,RuleModifer
 
 " ---------------------------------------------------------------------------
 " Name of the grammar
@@ -62,13 +62,23 @@ syntax keyword OhmKeyword any letter lower upper digit hexDigit alnum space end
 " ---------------------------------------------------------------------------
 " Grammar rules
 " ---------------------------------------------------------------------------
-syntax match SyntacticRule '\v<\u\w*>(\_s{-}(\=|:\=|\+\=))@='
-syntax match SyntacticRule '\v<\u\w*>(\_s{-}\([^)]*\)\_s{-}(\=|:\=|\+\=))@='
-syntax match SyntacticRule '\v<\u\w*>(\_s{-}\([^)]*\_s{-}(\=|:\=|\+\=))@='
+let s:pref = '\v<\'
+let s:syn  = 'u'
+let s:lex  = 'U'
+let s:name = '\w*>('
+let s:mod  = '(\<\w+\>)?\_s{-}'
+let s:desc = '\([^)]*\)?\_s{-}'
+let s:op   = '(\=|:\=|\+\=))@='
 
-syntax match LexicalRule '\v<\U\w*>(\_s{-}(\=|:\=|\+\=))@='
-syntax match LexicalRule '\v<\U\w*>(\_s{-}\([^)]*\)\_s{-}(\=|:\=|\+\=))@='
-syntax match LexicalRule '\v<\U\w*>(\_s{-}\([^)]*\_s{-}(\=|:\=|\+\=))@='
+exe "syntax match SyntacticRule '" . s:pref . s:syn . s:name . s:op . "'"
+exe "syntax match SyntacticRule '" . s:pref . s:syn . s:name . s:mod . s:op . "'"
+exe "syntax match SyntacticRule '" . s:pref . s:syn . s:name . s:desc . s:op . "'"
+exe "syntax match SyntacticRule '" . s:pref . s:syn . s:name . s:mod . s:desc . s:op . "'"
+
+exe "syntax match LexicalRule '" . s:pref . s:lex . s:name . s:op . "'"
+exe "syntax match LexicalRule '" . s:pref . s:lex . s:name . s:mod . s:op . "'"
+exe "syntax match LexicalRule '" . s:pref . s:lex . s:name . s:desc . s:op . "'"
+exe "syntax match LexicalRule '" . s:pref . s:lex . s:name . s:mod . s:desc . s:op . "'"
 
 " ---------------------------------------------------------------------------
 " Specifying highlighting
