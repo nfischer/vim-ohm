@@ -1,6 +1,6 @@
 # Vim-Ohm
 
-Vim syntax highlighting for [Ohm grammars](https://github.com/pangloss/vim-javascript)!
+Vim syntax highlighting for [Ohm grammars](https://github.com/cdglabs/ohm)!
 
 ![Vim screen shot](https://i.imgur.com/4622lKb.png "Ohm in technicolor!")
 
