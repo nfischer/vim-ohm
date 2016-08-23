@@ -1,0 +1,17 @@
+*vim-ohm.txt*
+                                                                     *vim-ohm*
+
+==============================================================================
+CONTENTS                                                    *vim-ohm-contents*
+  1. Commands...............................................|vim-ohm-commands|
+
+==============================================================================
+COMMANDS                                                    *vim-ohm-commands*
+
+:OhmDef                                                              *:OhmDef*
+  Goto definition for the rule under the cursor. If you're in a semantic
+  action (and you also have the Ohm file open), this will jump across to the
+  Ohm grammar.
+
+
+vim:tw=78:ts=8:ft=help:norl:
