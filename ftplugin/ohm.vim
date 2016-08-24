@@ -48,4 +48,4 @@ endif
 
 ""
 " @setting g:ohm#enable_mappings
-" Set this to 1 in order to disable mappings
+" Set this to 0 in order to disable mappings
