@@ -21,5 +21,11 @@ COMMANDS                                                    *vim-ohm-commands*
   you also have the .ohm file open), this will jump across to the Ohm grammar.
   By default, this is also mapped to <CTRL-]>
 
+:OhmSem [rule_name]                                                  *:OhmSem*
+  Go to the semantic action for <rule_name>. If this is left blank, this
+  instead uses the name under the cursor. If you're in your grammar file (and
+  you also have the semantic action file open), this will jump across to the
+  file.
+
 
 vim:tw=78:ts=8:ft=help:norl:
