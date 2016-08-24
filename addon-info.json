@@ -1,0 +1,9 @@
+{
+  "name": "vim-ohm",
+  "description": "Vim runtime files for the Ohm language",
+  "author": "Nate Fischer <ntfschr@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nfischer/vim-ohm"
+  }
+}

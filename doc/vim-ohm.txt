@@ -1,17 +1,25 @@
-*vim-ohm.txt*
-                                                                     *vim-ohm*
+*vim-ohm.txt*	Vim runtime files for the Ohm language
+Nate Fischer <ntfschr@gmail.com>                                     *vim-ohm*
 
 ==============================================================================
 CONTENTS                                                    *vim-ohm-contents*
-  1. Commands...............................................|vim-ohm-commands|
+  1. Configuration............................................|vim-ohm-config|
+  2. Commands...............................................|vim-ohm-commands|
+
+==============================================================================
+CONFIGURATION                                                 *vim-ohm-config*
+
+                                                       *g:ohm#enable_mappings*
+Set this to 1 in order to disable mappings
 
 ==============================================================================
 COMMANDS                                                    *vim-ohm-commands*
 
-:OhmDef                                                              *:OhmDef*
-  Goto definition for the rule under the cursor. If you're in a semantic
-  action (and you also have the Ohm file open), this will jump across to the
-  Ohm grammar.
+:OhmDef [rule_name]                                                  *:OhmDef*
+  Go to the definition for <rule_name>. If this is left blank, this instead
+  uses the name under the cursor. If you're in your semantic action file (and
+  you also have the .ohm file open), this will jump across to the Ohm grammar.
+  By default, this is also mapped to <CTRL-]>
 
 
 vim:tw=78:ts=8:ft=help:norl:
