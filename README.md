@@ -31,22 +31,9 @@ syntax on
 set background=dark " recommended for terminals with a dark background
 ```
 
-### Without a plugin manager
+## Helper commands
 
- - If on unix, run these commands:
-
-  ```Bash
-  $ mkdir -p ~/.vim/syntax ~/.vim/ftdetect
-  $ wget https://raw.githubusercontent.com/nfischer/vim-ohm/master/syntax/ohm.vim
-  $ mv ohm.vim ~/.vim/syntax
-  $ wget https://raw.githubusercontent.com/nfischer/vim-ohm/master/ftdetect/ohm.vim
-  $ mv ohm.vim ~/.vim/ftdetect
-  ```
-
- - Otherwise:
-    - Download the file `syntax/ohm.vim`. Copy it to the location
-      `~/.vim/syntax/ohm.vim`.  If the folders do not already exist, create
-      them.
-    - Do the same with `ftdetect/ohm.vim` to the location
-      `~/.vim/ftdetect/ohm.vim`.
-    - Start vim. If you don't see any colors, type `:syntax on` and press enter.
+This plugin now provides some helper commands for navigating around the files
+(inspired by [vim-go](https://github.com/fatih/vim-go)). You can find
+documentation on these commands and mappings from within vim by using `:help
+vim-ohm`.
