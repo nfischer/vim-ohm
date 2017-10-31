@@ -1,6 +1,6 @@
 # Vim-Ohm
 
-Vim syntax highlighting for [Ohm grammars](https://github.com/cdglabs/ohm)!
+Vim syntax highlighting for [Ohm grammars](https://github.com/harc/ohm)!
 
 ![Vim screen shot](https://i.imgur.com/4622lKb.png "Ohm in technicolor!")
 
@@ -16,7 +16,7 @@ I'll deal with it quickly.
 ## What is Ohm?
 
 Ohm is a language for prototyping programming languages. Check out the project
-[on Github](https://github.com/cdglabs/ohm)
+[on Github](https://github.com/harc/ohm)
 
 ## Installation
 
